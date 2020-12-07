@@ -1,0 +1,188 @@
+/* General */
+:root {
+  --primary-color: #03396c;
+  --secondary-color: #005b96;
+  --primary-light: #b3cde0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(-45deg, #d53369 0%, #daae51 100%);
+  position: relative;
+}
+/* Link/Pig nose image*/
+a {
+  text-decoration: none;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  z-index: 1;
+}
+/* Classes */
+.active {
+  background-color: rgba(255, 165, 0, 0.2);
+}
+
+.show {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+/* Page elements/ Global container */
+.container {
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+/* Game box */
+.game-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 65%;
+  margin: auto;
+  border-radius: 10px;
+  border: 3px solid white;
+  display: flex;
+  box-shadow: 0px 0px 15px 15px rgba(51, 51, 51, 0.1);
+}
+/* Left part of game box */
+.left-side {
+  width: 50%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Player 1 & Player 2 headings */
+.left-side h2,
+.right-side h2 {
+  text-transform: uppercase;
+  font-size: 2.5vw !important;
+  color: white;
+  padding-top: 2.3vw;
+  letter-spacing: 3px;
+}
+/* Total score count */
+div.left-side .total-score,
+div.right-side .total-score {
+  width: 25%;
+  height: 15%;
+  text-align: center;
+  font-size: 4.8vw;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+/* Current score count */
+div.left-side .current-score,
+div.right-side .current-score {
+  width: 35%;
+  height: 15%;
+  text-align: center;
+  font-size: 2.8vw;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 3vw;
+}
+/* 'Round Score' label */
+.current-score p {
+  font-size: 1vw;
+  text-transform: uppercase;
+  padding: 0.15rem 0 0 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+/* Right part of game box */
+.right-side {
+  width: 50%;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Pig nose image */
+img#pig {
+  width: 2.8vw;
+}
+/* Dice */
+img#dice {
+  width: 4.8vw;
+  height: 4.8vw;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Buttons styling */
+/* .btn is general styling class for all buttons */
+.btn {
+  position: absolute;
+  cursor: pointer;
+  padding: 0.4vw 0.85vw;
+  text-transform: uppercase;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 0.75vw;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.btn:hover {
+  background-color: var(--primary-light);
+  box-shadow: 0px 0px 5px 4px rgba(51, 51, 51, 0.1);
+  transition: all 0.15s ease-in;
+}
+
+.btn:active {
+  color: orangered;
+  outline-color: orangered;
+}
+/* Buttons positioning */
+.btn.new-game {
+  top: 12.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn.roll-dice {
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn.hold-score {
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
