@@ -102,7 +102,7 @@ rDiceButton.addEventListener('click', rollDice);
 
 //Style changes on P1 win
 function firstPlayerWins() {
-  p0heading.innerText = 'Winner !'; ///???
+  p0heading.innerText = 'Winner !'; 
   p0heading.style.fontSize = '2.8rem';
   p0heading.style.color = 'var(--primary-color)';
   player1.classList.remove('active');
@@ -110,7 +110,7 @@ function firstPlayerWins() {
 }
 //Style changes on P2 win
 function secondPlayerWins() {
-  p1heading.innerText = 'Winner !'; ///???
+  p1heading.innerText = 'Winner !'; 
   p1heading.style.fontSize = '2.8rem';
   p1heading.style.color = 'var(--primary-color)';
   player0.classList.remove('active');
